@@ -1,0 +1,754 @@
+nov. 29, 2013 11:13:57 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+nov. 29, 2013 11:13:57 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:13:57 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:13:57 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 784 ms
+nov. 29, 2013 11:13:57 AM org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+nov. 29, 2013 11:13:57 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.47
+nov. 29, 2013 11:13:57 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/reader-services-0.1-SNAPSHOT.war de l'application web
+nov. 29, 2013 11:13:59 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+nov. 29, 2013 11:13:59 AM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Fri Nov 29 11:13:59 CET 2013]; root of context hierarchy
+nov. 29, 2013 11:13:59 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-context.xml]
+nov. 29, 2013 11:14:00 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7595e308: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 11:14:02 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:14:02 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:14:02 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:14:02 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 11:14:02 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 11:14:02 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 11:14:02 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 11:14:02 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 11:14:02 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 3175 ms
+nov. 29, 2013 11:14:02 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/docs de l'application web
+nov. 29, 2013 11:14:03 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/ROOT de l'application web
+nov. 29, 2013 11:14:03 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/manager de l'application web
+nov. 29, 2013 11:14:03 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/examples de l'application web
+nov. 29, 2013 11:14:03 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/host-manager de l'application web
+nov. 29, 2013 11:14:03 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:14:03 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:14:03 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 5984 ms
+nov. 29, 2013 11:14:15 AM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing Root WebApplicationContext: startup date [Fri Nov 29 11:13:59 CET 2013]; root of context hierarchy
+nov. 29, 2013 11:14:15 AM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7595e308: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 11:14:15 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+nov. 29, 2013 11:14:16 AM org.apache.catalina.startup.HostConfig deleteRedeployResources
+INFO: Repli (undeploy) de l'application web ayant pour chemin de contexte /reader-services-0.1-SNAPSHOT
+nov. 29, 2013 11:14:27 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+nov. 29, 2013 11:14:27 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:14:28 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:14:28 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+nov. 29, 2013 11:14:28 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:14:33 AM org.apache.tomcat.util.net.AbstractEndpoint shutdownExecutor
+WARNING: The executor associated with thread pool [http-bio-8080] has not fully shutdown. Some application threads may still be running.
+nov. 29, 2013 11:14:33 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:14:33 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:14:33 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:14:47 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+nov. 29, 2013 11:14:47 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:14:47 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:14:47 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 638 ms
+nov. 29, 2013 11:14:47 AM org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+nov. 29, 2013 11:14:47 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.47
+nov. 29, 2013 11:14:47 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/docs de l'application web
+nov. 29, 2013 11:14:48 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/ROOT de l'application web
+nov. 29, 2013 11:14:48 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/manager de l'application web
+nov. 29, 2013 11:14:48 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/examples de l'application web
+nov. 29, 2013 11:14:48 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/host-manager de l'application web
+nov. 29, 2013 11:14:49 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:14:49 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:14:49 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1445 ms
+nov. 29, 2013 11:15:32 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/reader-services-0.1-SNAPSHOT.war de l'application web
+nov. 29, 2013 11:15:33 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+nov. 29, 2013 11:15:33 AM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Fri Nov 29 11:15:33 CET 2013]; root of context hierarchy
+nov. 29, 2013 11:15:33 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-context.xml]
+nov. 29, 2013 11:15:34 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6377746a: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 11:15:35 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 11:15:35 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:15:35 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:15:35 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:15:35 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 11:15:35 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 11:15:35 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 11:15:35 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 11:15:35 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 1886 ms
+nov. 29, 2013 11:17:06 AM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization started
+nov. 29, 2013 11:17:06 AM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 11:17:06 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 11:17:06 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-servlet.xml]
+nov. 29, 2013 11:17:07 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e68fb00: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@6377746a
+nov. 29, 2013 11:17:08 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 11:17:08 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:17:08 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:17:08 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:17:08 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 11:17:08 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 11:17:08 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 11:17:08 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 11:17:08 AM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization completed in 1642 ms
+nov. 29, 2013 11:17:09 AM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/users/users/create] in DispatcherServlet with name 'rest'
+nov. 29, 2013 11:21:22 AM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/streams/streams/add] in DispatcherServlet with name 'rest'
+nov. 29, 2013 11:23:04 AM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 11:17:06 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 11:23:04 AM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e68fb00: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@6377746a
+nov. 29, 2013 11:23:04 AM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing Root WebApplicationContext: startup date [Fri Nov 29 11:15:33 CET 2013]; root of context hierarchy
+nov. 29, 2013 11:23:04 AM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6377746a: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 11:23:04 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+nov. 29, 2013 11:23:05 AM org.apache.catalina.startup.HostConfig deleteRedeployResources
+INFO: Repli (undeploy) de l'application web ayant pour chemin de contexte /reader-services-0.1-SNAPSHOT
+nov. 29, 2013 11:23:10 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+nov. 29, 2013 11:23:10 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:23:11 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:23:11 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+nov. 29, 2013 11:23:11 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:23:16 AM org.apache.tomcat.util.net.AbstractEndpoint shutdownExecutor
+WARNING: The executor associated with thread pool [http-bio-8080] has not fully shutdown. Some application threads may still be running.
+nov. 29, 2013 11:23:16 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:23:16 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:23:16 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:23:18 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+nov. 29, 2013 11:23:18 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:23:18 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:23:18 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 666 ms
+nov. 29, 2013 11:23:18 AM org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+nov. 29, 2013 11:23:19 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.47
+nov. 29, 2013 11:23:19 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/docs de l'application web
+nov. 29, 2013 11:23:23 AM org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [3 477] milliseconds.
+nov. 29, 2013 11:23:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/ROOT de l'application web
+nov. 29, 2013 11:23:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/manager de l'application web
+nov. 29, 2013 11:23:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/examples de l'application web
+nov. 29, 2013 11:23:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/host-manager de l'application web
+nov. 29, 2013 11:23:23 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 11:23:23 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 11:23:23 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 4877 ms
+nov. 29, 2013 11:23:27 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/reader-services-0.1-SNAPSHOT.war de l'application web
+nov. 29, 2013 11:23:29 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+nov. 29, 2013 11:23:29 AM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Fri Nov 29 11:23:29 CET 2013]; root of context hierarchy
+nov. 29, 2013 11:23:29 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-context.xml]
+nov. 29, 2013 11:23:29 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7d78d7b4: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 11:23:30 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:30 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:30 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 11:23:30 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:30 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 11:23:30 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:30 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 11:23:30 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:30 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 1931 ms
+nov. 29, 2013 11:23:49 AM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization started
+nov. 29, 2013 11:23:49 AM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 11:23:49 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 11:23:49 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-servlet.xml]
+nov. 29, 2013 11:23:49 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@53beb914: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7d78d7b4
+nov. 29, 2013 11:23:51 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:51 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:51 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 11:23:51 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:51 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 11:23:51 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:51 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 11:23:51 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 11:23:51 AM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization completed in 1553 ms
+nov. 29, 2013 11:24:19 AM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/users/users/create] in DispatcherServlet with name 'rest'
+nov. 29, 2013 11:27:51 AM org.apache.catalina.core.StandardWrapper unload
+INFO: Waiting for 1 instance(s) to be deallocated for Servlet [rest]
+nov. 29, 2013 11:27:52 AM org.apache.catalina.core.StandardWrapper unload
+INFO: Waiting for 1 instance(s) to be deallocated for Servlet [rest]
+nov. 29, 2013 11:27:53 AM org.apache.catalina.core.StandardWrapper unload
+INFO: Waiting for 1 instance(s) to be deallocated for Servlet [rest]
+nov. 29, 2013 11:27:53 AM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 11:23:49 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 11:27:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@53beb914: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7d78d7b4
+nov. 29, 2013 11:27:53 AM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing Root WebApplicationContext: startup date [Fri Nov 29 11:23:29 CET 2013]; root of context hierarchy
+nov. 29, 2013 11:27:53 AM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7d78d7b4: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 11:27:53 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+nov. 29, 2013 11:27:53 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation.
+nov. 29, 2013 11:27:53 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] created a ThreadLocal with key of type [org.springframework.core.NamedThreadLocal] (value [Request attributes]) and a value of type [org.springframework.web.context.request.ServletRequestAttributes] (value [org.apache.catalina.connector.RequestFacade@5ff87491]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+nov. 29, 2013 11:27:53 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] created a ThreadLocal with key of type [org.springframework.core.NamedThreadLocal] (value [Locale context]) and a value of type [org.springframework.web.servlet.DispatcherServlet$1] (value [fr_FR]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+nov. 29, 2013 11:27:54 AM org.apache.catalina.startup.HostConfig deleteRedeployResources
+INFO: Repli (undeploy) de l'application web ayant pour chemin de contexte /reader-services-0.1-SNAPSHOT
+nov. 29, 2013 11:28:15 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/reader-services-0.1-SNAPSHOT.war de l'application web
+nov. 29, 2013 11:28:15 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+nov. 29, 2013 11:28:15 AM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Fri Nov 29 11:28:15 CET 2013]; root of context hierarchy
+nov. 29, 2013 11:28:16 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-context.xml]
+nov. 29, 2013 11:28:16 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6fe3870f: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 11:28:17 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:17 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:17 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 11:28:17 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:17 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 11:28:17 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:17 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 11:28:17 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:18 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 2222 ms
+nov. 29, 2013 11:28:27 AM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization started
+nov. 29, 2013 11:28:27 AM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 11:28:27 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 11:28:27 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-servlet.xml]
+nov. 29, 2013 11:28:27 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3072f908: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@6fe3870f
+nov. 29, 2013 11:28:29 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:29 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:29 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 11:28:29 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:29 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 11:28:29 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:29 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 11:28:29 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 11:28:29 AM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization completed in 1442 ms
+nov. 29, 2013 11:30:36 AM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/streams/streams/add] in DispatcherServlet with name 'rest'
+nov. 29, 2013 11:31:19 AM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 11:28:27 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 11:31:19 AM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3072f908: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@6fe3870f
+nov. 29, 2013 11:31:19 AM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing Root WebApplicationContext: startup date [Fri Nov 29 11:28:15 CET 2013]; root of context hierarchy
+nov. 29, 2013 11:31:19 AM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6fe3870f: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 11:31:19 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+nov. 29, 2013 11:31:20 AM org.apache.catalina.startup.HostConfig deleteRedeployResources
+INFO: Repli (undeploy) de l'application web ayant pour chemin de contexte /reader-services-0.1-SNAPSHOT
+nov. 29, 2013 11:31:36 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/reader-services-0.1-SNAPSHOT.war de l'application web
+nov. 29, 2013 11:31:37 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+nov. 29, 2013 11:31:37 AM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Fri Nov 29 11:31:37 CET 2013]; root of context hierarchy
+nov. 29, 2013 11:31:37 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-context.xml]
+nov. 29, 2013 11:31:37 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1ec25d61: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 11:31:39 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:39 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:39 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 11:31:39 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:39 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 11:31:39 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:39 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 11:31:39 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:39 AM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 2091 ms
+nov. 29, 2013 11:31:52 AM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization started
+nov. 29, 2013 11:31:52 AM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 11:31:52 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 11:31:52 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-servlet.xml]
+nov. 29, 2013 11:31:52 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@91e7898: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1ec25d61
+nov. 29, 2013 11:31:53 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:53 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:53 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 11:31:53 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:53 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 11:31:53 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:53 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 11:31:53 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 11:31:53 AM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization completed in 1401 ms
+nov. 29, 2013 11:34:00 AM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/streams/streams/add] in DispatcherServlet with name 'rest'
+nov. 29, 2013 11:34:18 AM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/streams/streams/add] in DispatcherServlet with name 'rest'
+nov. 29, 2013 12:10:16 PM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 11:31:52 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 12:10:16 PM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@91e7898: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1ec25d61
+nov. 29, 2013 12:10:16 PM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing Root WebApplicationContext: startup date [Fri Nov 29 11:31:37 CET 2013]; root of context hierarchy
+nov. 29, 2013 12:10:16 PM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1ec25d61: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 12:10:16 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+nov. 29, 2013 12:10:16 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] created a ThreadLocal with key of type [com.sun.syndication.feed.impl.ToStringBean$1] (value [com.sun.syndication.feed.impl.ToStringBean$1@25410a35]) and a value of type [java.util.Stack] (value [[]]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+nov. 29, 2013 12:10:17 PM org.apache.catalina.startup.HostConfig deleteRedeployResources
+INFO: Repli (undeploy) de l'application web ayant pour chemin de contexte /reader-services-0.1-SNAPSHOT
+nov. 29, 2013 12:10:51 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/reader-services-0.1-SNAPSHOT.war de l'application web
+nov. 29, 2013 12:10:52 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+nov. 29, 2013 12:10:52 PM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Fri Nov 29 12:10:52 CET 2013]; root of context hierarchy
+nov. 29, 2013 12:10:52 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-context.xml]
+nov. 29, 2013 12:10:52 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@239af7fd: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 12:10:54 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:10:54 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:10:54 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 12:10:54 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:10:54 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 12:10:54 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 12:10:54 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 12:10:54 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 12:10:54 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 2653 ms
+nov. 29, 2013 12:11:06 PM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization started
+nov. 29, 2013 12:11:06 PM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 12:11:06 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 12:11:06 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-servlet.xml]
+nov. 29, 2013 12:11:06 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4589adff: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@239af7fd
+nov. 29, 2013 12:11:07 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:11:07 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:11:07 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 12:11:07 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:11:07 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 12:11:07 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 12:11:07 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 12:11:07 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 12:11:07 PM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization completed in 1541 ms
+nov. 29, 2013 12:11:14 PM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/streams/streams/add] in DispatcherServlet with name 'rest'
+nov. 29, 2013 12:13:46 PM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 12:11:06 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 12:13:46 PM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4589adff: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@239af7fd
+nov. 29, 2013 12:13:46 PM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing Root WebApplicationContext: startup date [Fri Nov 29 12:10:52 CET 2013]; root of context hierarchy
+nov. 29, 2013 12:13:46 PM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@239af7fd: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 12:13:46 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+nov. 29, 2013 12:13:47 PM org.apache.catalina.startup.HostConfig deleteRedeployResources
+INFO: Repli (undeploy) de l'application web ayant pour chemin de contexte /reader-services-0.1-SNAPSHOT
+nov. 29, 2013 12:14:01 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+nov. 29, 2013 12:14:01 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:14:02 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:14:02 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+nov. 29, 2013 12:14:02 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:14:07 PM org.apache.tomcat.util.net.AbstractEndpoint shutdownExecutor
+WARNING: The executor associated with thread pool [http-bio-8080] has not fully shutdown. Some application threads may still be running.
+nov. 29, 2013 12:14:07 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:14:07 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:14:07 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:14:10 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+nov. 29, 2013 12:14:10 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:14:10 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:14:10 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 653 ms
+nov. 29, 2013 12:14:10 PM org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+nov. 29, 2013 12:14:10 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.47
+nov. 29, 2013 12:14:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/docs de l'application web
+nov. 29, 2013 12:14:11 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/ROOT de l'application web
+nov. 29, 2013 12:14:11 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/manager de l'application web
+nov. 29, 2013 12:14:11 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/examples de l'application web
+nov. 29, 2013 12:14:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/host-manager de l'application web
+nov. 29, 2013 12:14:12 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:14:12 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:14:12 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1540 ms
+nov. 29, 2013 12:14:23 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/reader-services-0.1-SNAPSHOT.war de l'application web
+nov. 29, 2013 12:14:24 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+nov. 29, 2013 12:14:24 PM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Fri Nov 29 12:14:24 CET 2013]; root of context hierarchy
+nov. 29, 2013 12:14:24 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-context.xml]
+nov. 29, 2013 12:14:25 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c269a4d: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 12:14:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:14:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:14:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:14:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 12:14:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 12:14:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 12:14:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 12:14:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 12:14:26 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 1808 ms
+nov. 29, 2013 12:15:25 PM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization started
+nov. 29, 2013 12:15:25 PM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 12:15:25 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 12:15:25 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-servlet.xml]
+nov. 29, 2013 12:15:25 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@22ac0af0: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1c269a4d
+nov. 29, 2013 12:15:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:15:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:15:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:15:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 12:15:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 12:15:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 12:15:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 12:15:26 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 12:15:27 PM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization completed in 1385 ms
+nov. 29, 2013 12:15:27 PM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/users/users/create] in DispatcherServlet with name 'rest'
+nov. 29, 2013 12:16:34 PM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/streams/streams/add] in DispatcherServlet with name 'rest'
+nov. 29, 2013 12:17:03 PM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/streams/streams/add] in DispatcherServlet with name 'rest'
+nov. 29, 2013 12:20:23 PM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 12:15:25 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 12:20:23 PM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@22ac0af0: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1c269a4d
+nov. 29, 2013 12:20:23 PM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing Root WebApplicationContext: startup date [Fri Nov 29 12:14:24 CET 2013]; root of context hierarchy
+nov. 29, 2013 12:20:23 PM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c269a4d: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 12:20:23 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+nov. 29, 2013 12:20:23 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] created a ThreadLocal with key of type [com.sun.syndication.feed.impl.ToStringBean$1] (value [com.sun.syndication.feed.impl.ToStringBean$1@40ca8d60]) and a value of type [java.util.Stack] (value [[]]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+nov. 29, 2013 12:20:23 PM org.apache.catalina.startup.HostConfig deleteRedeployResources
+INFO: Repli (undeploy) de l'application web ayant pour chemin de contexte /reader-services-0.1-SNAPSHOT
+nov. 29, 2013 12:20:26 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+nov. 29, 2013 12:20:26 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:20:26 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:20:26 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+nov. 29, 2013 12:20:26 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:20:31 PM org.apache.tomcat.util.net.AbstractEndpoint shutdownExecutor
+WARNING: The executor associated with thread pool [http-bio-8080] has not fully shutdown. Some application threads may still be running.
+nov. 29, 2013 12:20:31 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:20:31 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:20:31 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:20:35 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+nov. 29, 2013 12:20:35 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:20:35 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:20:35 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 786 ms
+nov. 29, 2013 12:20:35 PM org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+nov. 29, 2013 12:20:35 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.47
+nov. 29, 2013 12:20:35 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/docs de l'application web
+nov. 29, 2013 12:20:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/ROOT de l'application web
+nov. 29, 2013 12:20:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/manager de l'application web
+nov. 29, 2013 12:20:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/examples de l'application web
+nov. 29, 2013 12:20:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/host-manager de l'application web
+nov. 29, 2013 12:20:36 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+nov. 29, 2013 12:20:36 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+nov. 29, 2013 12:20:36 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1347 ms
+nov. 29, 2013 12:20:50 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive /home/robinovitch/M2ALMA/Projet_CodeLutin/apache-tomcat-7.0.47/webapps/reader-services-0.1-SNAPSHOT.war de l'application web
+nov. 29, 2013 12:20:51 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization started
+nov. 29, 2013 12:20:51 PM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing Root WebApplicationContext: startup date [Fri Nov 29 12:20:51 CET 2013]; root of context hierarchy
+nov. 29, 2013 12:20:51 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-context.xml]
+nov. 29, 2013 12:20:52 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5aacbf5a: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 12:20:53 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:20:53 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 12:20:53 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:20:53 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:20:53 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 12:20:53 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 12:20:53 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 12:20:53 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 12:20:53 PM org.springframework.web.context.ContextLoader initWebApplicationContext
+INFO: Root WebApplicationContext: initialization completed in 2082 ms
+nov. 29, 2013 12:22:16 PM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization started
+nov. 29, 2013 12:22:16 PM org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+INFO: Refreshing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 12:22:16 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 12:22:16 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from ServletContext resource [/WEB-INF/rest-servlet.xml]
+nov. 29, 2013 12:22:16 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@218dc1b2: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@5aacbf5a
+nov. 29, 2013 12:22:17 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.StreamHandlerController.addSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:22:17 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/updateAll],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<fr.alma.middleware1314.api.Feed> fr.alma.middleware1314.services.StreamHandlerController.updateAll(java.lang.String)
+nov. 29, 2013 12:22:17 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/deleteSource],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public boolean fr.alma.middleware1314.services.StreamHandlerController.deleteSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:22:17 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/streams/update],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.Feed fr.alma.middleware1314.services.StreamHandlerController.updateSource(java.lang.String,java.lang.String)
+nov. 29, 2013 12:22:17 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.deleteUser(java.lang.String)
+nov. 29, 2013 12:22:17 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public fr.alma.middleware1314.api.UserToken fr.alma.middleware1314.services.UserHandlerController.login(java.lang.String,java.lang.String)
+nov. 29, 2013 12:22:17 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/logout],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.logout(fr.alma.middleware1314.api.UserToken)
+nov. 29, 2013 12:22:17 PM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/users/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void fr.alma.middleware1314.services.UserHandlerController.createUser(java.lang.String,java.lang.String)
+nov. 29, 2013 12:22:17 PM org.springframework.web.servlet.DispatcherServlet initServletBean
+INFO: FrameworkServlet 'rest': initialization completed in 1384 ms
+nov. 29, 2013 12:22:18 PM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/users/users/create] in DispatcherServlet with name 'rest'
+nov. 29, 2013 12:23:47 PM org.springframework.web.servlet.PageNotFound noHandlerFound
+WARNING: No mapping found for HTTP request with URI [/reader-services-0.1-SNAPSHOT/streams/streams/add] in DispatcherServlet with name 'rest'
+nov. 29, 2013 12:28:50 PM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing WebApplicationContext for namespace 'rest-servlet': startup date [Fri Nov 29 12:22:16 CET 2013]; parent: Root WebApplicationContext
+nov. 29, 2013 12:28:50 PM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@218dc1b2: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@5aacbf5a
+nov. 29, 2013 12:28:50 PM org.springframework.web.context.support.XmlWebApplicationContext doClose
+INFO: Closing Root WebApplicationContext: startup date [Fri Nov 29 12:20:51 CET 2013]; root of context hierarchy
+nov. 29, 2013 12:28:50 PM org.springframework.beans.factory.support.DefaultListableBeanFactory destroySingletons
+INFO: Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5aacbf5a: defining beans [streamHandlerController,userHandlerController,h2Handler,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+nov. 29, 2013 12:28:50 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+nov. 29, 2013 12:28:50 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/reader-services-0.1-SNAPSHOT] created a ThreadLocal with key of type [com.sun.syndication.feed.impl.ToStringBean$1] (value [com.sun.syndication.feed.impl.ToStringBean$1@4624fd5c]) and a value of type [java.util.Stack] (value [[]]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+nov. 29, 2013 12:28:51 PM org.apache.catalina.startup.HostConfig deleteRedeployResources
+INFO: Repli (undeploy) de l'application web ayant pour chemin de contexte /reader-services-0.1-SNAPSHOT
